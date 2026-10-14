@@ -398,18 +398,18 @@ footer { border-top: 1px solid var(--line); padding: 24px 0 40px; color: var(--m
   }
 
   // защита от обычного копирования (контакты вне .protect остаются копируемыми)
-  function inProtected(t) { return t && t.closest && t.closest(".protect"); }
-  document.addEventListener("contextmenu", function (e) { if (inProtected(e.target)) e.preventDefault(); });
-  document.addEventListener("dragstart", function (e) { if (inProtected(e.target)) e.preventDefault(); });
-  document.addEventListener("copy", function (e) { if (inProtected(e.target)) e.preventDefault(); });
-  document.addEventListener("cut", function (e) { if (inProtected(e.target)) e.preventDefault(); });
-  document.addEventListener("selectstart", function (e) { if (inProtected(e.target)) e.preventDefault(); });
-  document.addEventListener("keydown", function (e) {
-    var k = (e.key || "").toLowerCase();
-    var sel = String(window.getSelection() || "");
-    if ((e.ctrlKey || e.metaKey) && ["s", "p", "u", "a"].indexOf(k) !== -1) e.preventDefault();
-    if ((e.ctrlKey || e.metaKey) && (k === "c" || k === "x") && !sel) e.preventDefault();
-  });
+  //function inProtected(t) { return t && t.closest && t.closest(".protect"); }
+  //document.addEventListener("contextmenu", function (e) { if (inProtected(e.target)) e.preventDefault(); });
+  //document.addEventListener("dragstart", function (e) { if (inProtected(e.target)) e.preventDefault(); });
+  //document.addEventListener("copy", function (e) { if (inProtected(e.target)) e.preventDefault(); });
+  //document.addEventListener("cut", function (e) { if (inProtected(e.target)) e.preventDefault(); });
+  //document.addEventListener("selectstart", function (e) { if (inProtected(e.target)) e.preventDefault(); });
+  //document.addEventListener("keydown", function (e) {
+    //var k = (e.key || "").toLowerCase();
+    //var sel = String(window.getSelection() || "");
+    //if ((e.ctrlKey || e.metaKey) && ["s", "p", "u", "a"].indexOf(k) !== -1) e.preventDefault();
+    //if ((e.ctrlKey || e.metaKey) && (k === "c" || k === "x") && !sel) e.preventDefault();
+  //});
 })();
 </script>
 </body>
