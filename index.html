@@ -1,0 +1,500 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script>document.documentElement.classList.add('js');</script>
+<title>Смирнов Даниил — маркетолог, SMM</title>
+<meta name="description" content="Резюме: Смирнов Даниил, маркетолог. SMM, контент-стратегия, анализ аудитории и конкурентов. Английский C1. Гибрид или удалённо.">
+<style>
+@font-face { font-family: "Gilroy"; src: url("fonts/gilroy-light.woff") format("woff"); font-weight: 300; font-style: normal; font-display: swap; }
+@font-face { font-family: "Gilroy"; src: url("fonts/gilroy-extrabold.woff") format("woff"); font-weight: 800; font-style: normal; font-display: swap; }
+@font-face { font-family: "Soyuz Grotesk"; src: url("fonts/soyuz-grotesk-bold.woff") format("woff"); font-weight: 700; font-style: normal; font-display: swap; }
+:root {
+  --font-head: "Soyuz Grotesk", "Gilroy", system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
+  --font-body: "Gilroy", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  --bg: #f4f8f7;
+  --ink: #101414;
+  --muted: #4d5957;
+  --line: #d9e4e2;
+  --accent: #0b8a86;
+  --accent-ink: #087571;
+  --card: rgba(255,255,255,.82);
+  --gutter: 20px;
+  --max: 1100px;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; background: var(--bg); }
+body {
+  margin: 0; background: var(--bg); color: var(--ink);
+  font-family: var(--font-body); font-size: 18px; font-weight: 300; line-height: 1.6;
+  font-synthesis: none; -webkit-text-size-adjust: 100%;
+}
+.wrap { max-width: var(--max); margin: 0 auto; padding: 0 var(--gutter); }
+h1, h2, h3 { font-family: var(--font-head); font-weight: 700; margin: 0; }
+b, strong { font-weight: 800; }
+a { color: inherit; }
+
+/* верхняя полоса */
+.top { padding: 22px 0 0; }
+.top .wrap { display: flex; justify-content: space-between; align-items: center; gap: 16px; }
+.top .mark { font-family: var(--font-head); font-size: 20px; text-decoration: none; }
+.top nav { display: flex; flex-wrap: wrap; gap: 6px 22px; font-size: 15px; }
+.top nav a { text-decoration: none; color: var(--muted); font-weight: 800; transition: color .15s; }
+.top nav a:hover { color: var(--accent-ink); }
+
+/* hero */
+.hero { padding: 64px 0 36px; }
+.eyebrow { color: var(--accent-ink); font-size: 13px; letter-spacing: .14em; text-transform: uppercase; font-weight: 800; margin: 0 0 18px; }
+.hero h1 { font-size: clamp(40px, 9vw, 92px); line-height: 1.02; letter-spacing: -.01em; margin: 0 0 22px; }
+.role { font-size: clamp(19px, 2.6vw, 26px); color: var(--muted); max-width: 34ch; margin: 0 0 30px; }
+.facts { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin: 34px 0 0; padding: 0; list-style: none; }
+.facts li { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 16px 18px; backdrop-filter: blur(6px); }
+.facts small { display: block; color: var(--muted); font-size: 13px; margin-bottom: 4px; }
+.facts strong { font-size: 18px; line-height: 1.3; display: block; }
+
+/* кнопки */
+.contacts { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
+.btn {
+  display: inline-flex; align-items: center; gap: 8px; padding: 12px 22px; border-radius: 99px;
+  text-decoration: none; font-weight: 800; font-size: 16px; border: 1px solid var(--ink); color: var(--ink);
+  transition: transform .12s ease, background .12s ease, color .12s ease;
+}
+.btn:hover { transform: translateY(-1px); }
+.btn.wa { background: #25d366; border-color: #25d366; color: #fff; }
+.btn.tg { background: #229ed9; border-color: #229ed9; color: #fff; }
+.btn.mail { background: var(--accent); border-color: var(--accent); color: #fff; }
+.btn.mail:hover { background: var(--accent-ink); border-color: var(--accent-ink); }
+.btn:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+.hint { color: var(--muted); font-size: 15px; margin: 14px 0 0; }
+
+/* секции */
+section.block { padding: 56px 0; border-top: 1px solid var(--line); }
+.tag { color: var(--accent-ink); font-size: 13px; letter-spacing: .14em; text-transform: uppercase; font-weight: 800; margin: 0 0 12px; }
+section.block h2 { font-size: clamp(26px, 4.4vw, 42px); line-height: 1.1; margin: 0 0 28px; }
+
+.about { display: grid; grid-template-columns: 1.1fr 1fr; gap: 28px 56px; }
+.about p { margin: 0 0 16px; max-width: 58ch; }
+.about p:first-child { font-size: 22px; line-height: 1.5; }
+.tools { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px; }
+
+.chip {
+  display: inline-block; padding: 7px 14px; border-radius: 99px; font-size: 15px; font-weight: 800;
+  background: rgba(255,255,255,.8); border: 1px solid var(--line); line-height: 1.3;
+}
+.chip.hl { background: var(--accent); border-color: var(--accent); color: #fff; }
+
+/* опыт */
+.tl { position: relative; padding-left: 30px; --tl-top: 12px; --tl-bottom: 12px; }
+.tl::before { content: ""; position: absolute; left: 6px; top: var(--tl-top); bottom: var(--tl-bottom); width: 2px; border-radius: 2px; background: linear-gradient(var(--accent), rgba(11,138,134,.12)); }
+.js .tl::before { background: rgba(11,138,134,.16); } /* бледная базовая линия */
+.tl-fill, .tl-ball { display: none; pointer-events: none; }
+.js .tl-fill, .js .tl-ball { display: block; }
+.tl-fill { /* окрашенный участок: растёт от начала линии до шарика */
+  position: absolute; left: 6px; top: var(--tl-top); bottom: var(--tl-bottom); width: 2px; border-radius: 2px;
+  background: linear-gradient(#27ddd0, #0fb5ae); box-shadow: 0 0 8px rgba(25,211,200,.5);
+  transform-origin: 50% 0; transform: scaleY(0); will-change: transform;
+}
+.tl-ball { /* единственный шарик; позицию задаёт скрипт */
+  position: absolute; left: 1px; top: 0; width: 12px; height: 12px; margin-top: -6px; border-radius: 50%; z-index: 2;
+  background: radial-gradient(circle at 35% 30%, #8ff5ec, #19d3c8 55%, #0fb5ae);
+  box-shadow: 0 0 0 5px rgba(25,211,200,.22), 0 6px 16px rgba(11,138,134,.38);
+  transform: translate3d(0, var(--tl-top), 0); will-change: transform;
+}
+.job { --mk-top: 32px; --mk-size: 14px; position: relative; background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 26px 28px; margin: 0 0 20px; backdrop-filter: blur(6px); }
+.job::before { content: ""; position: absolute; left: -30px; top: var(--mk-top); width: var(--mk-size); height: var(--mk-size); border-radius: 50%; background: var(--bg); border: 3px solid var(--accent); }
+.js .job::before { border-color: rgba(11,138,134,.28); transition: background-color .35s ease, border-color .35s ease, box-shadow .35s ease; }
+.js .job.is-on::before { background: #19d3c8; border-color: #19d3c8; box-shadow: 0 0 0 5px rgba(25,211,200,.18); }
+.job .when { color: var(--accent-ink); font-weight: 800; font-size: 14px; letter-spacing: .06em; text-transform: uppercase; margin: 0 0 8px; }
+.job h3 { font-size: clamp(22px, 3vw, 30px); line-height: 1.15; margin: 0 0 4px; }
+.job .org { color: var(--muted); margin: 0 0 16px; font-weight: 800; }
+.job ul { margin: 0; padding: 0; list-style: none; display: grid; gap: 8px; }
+.job li { position: relative; padding-left: 26px; }
+.job li::before { content: ""; position: absolute; left: 0; top: .72em; width: 12px; height: 2px; background: var(--accent); }
+.job .note { margin: 16px 0 0; padding: 10px 14px; border-radius: 10px; background: rgba(11,138,134,.08); font-size: 15px; color: var(--muted); }
+
+/* навыки */
+.skills { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
+.skillbox { background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 24px; backdrop-filter: blur(6px); }
+.skillbox h3 { font-size: 21px; margin: 0 0 14px; }
+.skillbox .tools { margin: 0; }
+
+/* образование + интересы */
+.two { display: grid; grid-template-columns: 1.2fr 1fr; gap: 18px; }
+.card { background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 26px 28px; backdrop-filter: blur(6px); }
+.card h3 { font-size: 22px; margin: 0 0 10px; }
+.card p { margin: 0 0 6px; }
+.card .muted { color: var(--muted); }
+
+/* финал */
+.cta { text-align: left; }
+.cta h2 { font-size: clamp(30px, 6vw, 64px); line-height: 1.05; max-width: 16ch; margin: 0 0 22px; }
+.cta p.lead { max-width: 46ch; color: var(--muted); margin: 0 0 28px; }
+
+footer { border-top: 1px solid var(--line); padding: 24px 0 40px; color: var(--muted); font-size: 14px; }
+
+/* кружки на фоне */
+.bg { position: fixed; inset: 0; z-index: -1; overflow: hidden; pointer-events: none; }
+.bg i { position: absolute; display: block; border-radius: 50%; filter: blur(90px); will-change: transform; animation: drift 26s ease-in-out infinite alternate; }
+.bg .b1 { width: 560px; height: 560px; left: -160px; top: -120px; background: #2dd4c4; opacity: .38; }
+.bg .b2 { width: 480px; height: 480px; right: -140px; top: 18%; background: #5eead4; opacity: .42; animation-duration: 32s; animation-delay: -8s; }
+.bg .b3 { width: 520px; height: 520px; left: 8%; bottom: -200px; background: #14b8a6; opacity: .28; animation-duration: 29s; animation-delay: -15s; }
+.bg .b4 { width: 300px; height: 300px; right: 14%; bottom: 8%; background: #99f6e4; opacity: .55; animation-duration: 22s; animation-delay: -4s; }
+@keyframes drift { from { transform: translate3d(0,0,0) scale(1); } to { transform: translate3d(70px,50px,0) scale(1.12); } }
+
+/* появление */
+@keyframes rise { from { opacity: 0; transform: translateY(22px); } to { opacity: 1; transform: none; } }
+.hero .wrap > *, .top .wrap { animation: rise .8s cubic-bezier(.2,.7,.2,1) both; }
+.hero .wrap > :nth-child(2) { animation-delay: .1s; }
+.hero .wrap > :nth-child(3) { animation-delay: .2s; }
+.hero .wrap > :nth-child(4) { animation-delay: .3s; }
+.hero .wrap > :nth-child(5) { animation-delay: .4s; }
+.hero .wrap > :nth-child(6) { animation-delay: .5s; }
+.js .reveal { opacity: 0; transform: translateY(26px); transition: opacity .7s cubic-bezier(.2,.7,.2,1), transform .7s cubic-bezier(.2,.7,.2,1); transition-delay: var(--d, 0ms); }
+.js .reveal.in { opacity: 1; transform: none; }
+
+@media (max-width: 860px) {
+  .facts { grid-template-columns: repeat(2, 1fr); }
+  .about, .two, .skills { grid-template-columns: 1fr; }
+}
+@media (max-width: 720px) {
+  :root { --gutter: 16px; }
+  .top nav a:not(.keep) { display: none; }
+  .hero { padding: 40px 0 24px; }
+  section.block { padding: 40px 0; }
+  .job { padding: 20px 18px; }
+  .tl { padding-left: 24px; }
+  .job { --mk-top: 26px; }
+  .job::before { left: -24px; }
+  .about p:first-child { font-size: 19px; }
+  .bg i { filter: blur(60px); }
+  .bg .b1 { width: 340px; height: 340px; }
+  .bg .b2 { width: 300px; height: 300px; }
+  .bg .b3 { width: 320px; height: 320px; }
+  .bg .b4 { width: 200px; height: 200px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .bg i, .hero .wrap > *, .top .wrap { animation: none; }
+  .js .reveal { opacity: 1; transform: none; transition: none; }
+  html { scroll-behavior: auto; }
+  /* без анимации: статичный таймлайн в «пройденном» состоянии */
+  .tl-ball { display: none !important; }
+  .tl-fill { transform: scaleY(1) !important; }
+  .job::before { transition: none !important; background: #19d3c8 !important; border-color: #19d3c8 !important; box-shadow: none !important; }
+}
+</style>
+</head>
+<body>
+<div class="bg" aria-hidden="true"><i class="b1"></i><i class="b2"></i><i class="b3"></i><i class="b4"></i></div>
+
+<div class="top">
+  <div class="wrap">
+    <a class="mark" href="#top">смирнов даниил</a>
+    <nav aria-label="Разделы">
+      <a href="#about">Обо мне</a>
+      <a href="#experience">Опыт</a>
+      <a href="#skills">Навыки</a>
+      <a href="#education">Образование</a>
+      <a href="groommir.html" class="keep">Портфолио</a>
+      <a href="#contacts" class="keep">Контакты</a>
+    </nav>
+  </div>
+</div>
+
+<header class="hero" id="top">
+  <div class="wrap">
+    <p class="eyebrow">Резюме · Маркетолог · SMM</p>
+    <h1>Смирнов Даниил</h1>
+    <p class="role">Маркетолог. Контент, аудитория и бизнес-задачи в одной системе.</p>
+    <div class="contacts">
+      <a class="btn mail" href="mailto:smirno.daniil.06@mail.ru">smirno.daniil.06@mail.ru</a>
+      <a class="btn ph" href="tel:+79610537674">+7 961 053-76-74</a>
+      <a class="btn wa" href="https://wa.me/79610537674" target="_blank" rel="noopener">WhatsApp</a>
+      <a class="btn tg" href="https://t.me/+79610537674" target="_blank" rel="noopener">Telegram</a>
+    </div>
+    <p class="hint">Предпочитаемый способ связи — электронная почта.</p>
+    <ul class="facts">
+      <li><small>Опыт работы</small><strong>6 лет 7 месяцев</strong></li>
+      <li><small>Занятость</small><strong>Постоянная работа, подработка</strong></li>
+      <li><small>Формат</small><strong>Гибрид, удалённо</strong></li>
+      <li><small>Английский</small><strong>C1</strong></li>
+    </ul>
+  </div>
+</header>
+
+<main>
+  <section class="block" id="about">
+    <div class="wrap">
+      <p class="tag">Обо мне</p>
+      <h2>Развиваюсь в маркетинге, SMM и digital-коммуникациях</h2>
+      <div class="about">
+        <div>
+          <p>Есть практический опыт работы с контентом и продвижением digital-проектов, включая проекты под NDA.</p>
+          <p>Умею анализировать аудиторию, конкурентов и клиентский путь, формулировать позиционирование и находить коммуникационные решения. Работаю с JTBD, CJM и контентными форматами для социальных сетей.</p>
+          <p>Быстро разбираюсь в новых инструментах и предметных областях, умею самостоятельно организовывать работу и доводить задачи до результата.</p>
+        </div>
+        <div>
+          <p class="tag" style="margin-top:6px">Интересуюсь</p>
+          <div class="tools">
+            <span class="chip hl">Реклама</span>
+            <span class="chip hl">Брендинг</span>
+            <span class="chip hl">Контент-маркетинг</span>
+            <span class="chip hl">Поведенческая экономика</span>
+          </div>
+          <p class="tag" style="margin-top:28px">Методы</p>
+          <div class="tools">
+            <span class="chip">JTBD</span>
+            <span class="chip">CJM</span>
+            <span class="chip">Позиционирование</span>
+            <span class="chip">Анализ конкурентов</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="experience">
+    <div class="wrap">
+      <p class="tag">Опыт</p>
+      <h2>Где я работал</h2>
+      <div class="tl">
+        <article class="job">
+          <p class="when">Август 2026 — сейчас · 3 месяца</p>
+          <h3>SMM-менеджер</h3>
+          <p class="org">NDA-проект</p>
+          <ul>
+            <li>Работа на зарубежную аудиторию и коммуникация на английском.</li>
+            <li>Разработка и реализация контент-стратегии.</li>
+            <li>Анализ целевой аудитории и конкурентов.</li>
+            <li>Ведение социальных сетей.</li>
+            <li>Подготовка контента и рекламных материалов.</li>
+            <li>Взаимодействие с командой проекта.</li>
+          </ul>
+          <p class="note">Название компании, внутренние процессы и отдельные показатели не раскрываются в соответствии с NDA.</p>
+        </article>
+
+        <article class="job">
+          <p class="when">Февраль 2026 — Июль 2026 · 6 месяцев</p>
+          <h3>Маркетолог</h3>
+          <p class="org">ООО «Промоушен-трейд»</p>
+          <ul>
+            <li>Создание и организация работы CRM в отделе продаж.</li>
+            <li>Внедрение и отслеживание KPI в отделе продаж.</li>
+            <li>Написание сценариев для коротких вертикальных видео (Reels), подготовка медиаплана.</li>
+            <li>Создание no-code решений для упрощения ведения бизнес-процессов.</li>
+            <li>Разработка оформления и фирменного стиля для ведения соцсетей.</li>
+          </ul>
+        </article>
+
+        <article class="job">
+          <p class="when">Апрель 2020 — Апрель 2026 · 6 лет 1 месяц</p>
+          <h3>Технический администратор</h3>
+          <p class="org">АНО ДПО «НОЦ «КОМПАС»»</p>
+          <ul>
+            <li>Оптимизация и реорганизация базы данных обучающихся.</li>
+            <li>Введение новой системы ведения базы данных студентов и мониторинга прохождения курсов.</li>
+            <li>Техническое сопровождение студентов, преподавателей и сотрудников в процессе обучения.</li>
+            <li>Создание программ обучения с помощью конструкторов сайтов и AI-based решений.</li>
+            <li>Оптимизация электронного документооборота (ЭДО) с помощью программных решений.</li>
+          </ul>
+        </article>
+        <span class="tl-fill" aria-hidden="true"></span>
+        <span class="tl-ball" aria-hidden="true"></span>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="skills">
+    <div class="wrap">
+      <p class="tag">Навыки</p>
+      <h2>Чем я владею</h2>
+      <div class="skills">
+        <div class="skillbox">
+          <h3>Стратегия и аналитика</h3>
+          <div class="tools">
+            <span class="chip">Маркетинговый анализ</span><span class="chip">Маркетинговые исследования</span>
+            <span class="chip">Анализ рынка</span><span class="chip">Анализ данных</span>
+            <span class="chip">Анализ конкурентной среды</span><span class="chip">Конкурентная разведка</span>
+            <span class="chip">Маржинальный анализ</span><span class="chip">Маркетинговое планирование</span>
+            <span class="chip">Разработка маркетинговой стратегии</span>
+          </div>
+        </div>
+        <div class="skillbox">
+          <h3>SMM и контент</h3>
+          <div class="tools">
+            <span class="chip">SMM</span><span class="chip">Social Media Marketing</span>
+            <span class="chip">Социальные сети</span><span class="chip">Ведение групп в социальных сетях</span>
+            <span class="chip">Написание текстов</span><span class="chip">Продвижение бренда</span>
+            <span class="chip">Маркетинговые коммуникации</span>
+          </div>
+        </div>
+        <div class="skillbox">
+          <h3>Реклама и кампании</h3>
+          <div class="tools">
+            <span class="chip">Реклама</span><span class="chip">Интернет-реклама</span>
+            <span class="chip">Контекстная реклама</span><span class="chip">Интернет-маркетинг</span>
+            <span class="chip">Проведение рекламных кампаний</span><span class="chip">Планирование рекламных кампаний</span>
+            <span class="chip">Планирование маркетинговых кампаний</span><span class="chip">Медиапланирование</span>
+            <span class="chip">Проведение промо-акций</span>
+          </div>
+        </div>
+        <div class="skillbox">
+          <h3>Организация и коммуникация</h3>
+          <div class="tools">
+            <span class="chip">Подготовка презентаций</span><span class="chip">Организаторские навыки</span>
+            <span class="chip">Организация мероприятий</span><span class="chip">Создание, развитие и ведение клиентской базы</span>
+            <span class="chip">Английский язык — C1</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="education">
+    <div class="wrap">
+      <p class="tag">Образование</p>
+      <h2>Учусь и расту</h2>
+      <div class="two">
+        <div class="card">
+          <h3>Саратовский государственный технический университет имени Гагарина Ю.А.</h3>
+          <p>Саратов</p>
+          <p class="muted">Реклама и связи с общественностью</p>
+          <p class="muted">2028 · неоконченное высшее</p>
+        </div>
+        <div class="card">
+          <h3>Английский язык</h3>
+          <p>Уровень C1. Работаю с зарубежной аудиторией и веду коммуникацию на английском.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block cta" id="contacts">
+    <div class="wrap">
+      <div>
+        <p class="tag">Контакты</p>
+        <h2>Давайте обсудим вашу задачу</h2>
+        <p class="lead">Готов к постоянной работе в гибридном или удалённом формате, возможны командировки.</p>
+      </div>
+      <div class="contacts">
+        <a class="btn mail" href="mailto:smirno.daniil.06@mail.ru">smirno.daniil.06@mail.ru</a>
+        <a class="btn ph" href="tel:+79610537674">+7 961 053-76-74</a>
+        <a class="btn wa" href="https://wa.me/79610537674" target="_blank" rel="noopener">WhatsApp</a>
+        <a class="btn tg" href="https://t.me/+79610537674" target="_blank" rel="noopener">Telegram</a>
+      </div>
+      <p class="hint">Смотрите также: <a href="groommir.html">тестовое задание для «Грум-мир»</a>.</p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">© 2026 Даниил Смирнов</div>
+</footer>
+
+<script>
+(function () {
+  // появление при прокрутке
+  var sels = ".facts li, .about > div, .tag, section.block h2, .job, .skillbox, .card, .cta .lead, .contacts .btn, .hint";
+  var els = Array.prototype.slice.call(document.querySelectorAll(sels));
+  els.forEach(function (el) {
+    if (el.closest(".hero .wrap > .contacts, .hero .wrap > .hint, .hero .wrap > .eyebrow")) return;
+    el.classList.add("reveal");
+    var idx = Array.prototype.indexOf.call(el.parentNode.children, el);
+    el.style.setProperty("--d", Math.min(idx, 6) * 80 + "ms");
+  });
+  var all = Array.prototype.slice.call(document.querySelectorAll(".reveal"));
+  if ("IntersectionObserver" in window) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (en.isIntersecting) { en.target.classList.add("in"); io.unobserve(en.target); }
+      });
+    }, { threshold: 0.12, rootMargin: "0px 0px -6% 0px" });
+    all.forEach(function (el) { io.observe(el); });
+  } else {
+    all.forEach(function (el) { el.classList.add("in"); });
+  }
+
+})();
+
+/* Таймлайн «Опыт»: шарик падает к маркеру карточки, линия окрашивается за ним.
+   Цель шарика зависит от прокрутки (с гистерезисом), само движение — пружинная физика. */
+(function () {
+  var tl = document.querySelector("#experience .tl");
+  if (!tl) return;
+  var ball = tl.querySelector(".tl-ball"), fill = tl.querySelector(".tl-fill");
+  var jobs = Array.prototype.slice.call(tl.querySelectorAll(".job"));
+  if (!ball || !fill || !jobs.length) return;
+
+  var mq = window.matchMedia ? window.matchMedia("(prefers-reduced-motion: reduce)") : { matches: false };
+  var OMEGA = 15;     // жёсткость пружины, рад/с: чем больше, тем быстрее падение
+  var ZETA = 0.66;    // демпфирование: ~6% перелёта, затем мягкий возврат
+  var TAU = 0.055;    // сглаживание цели: ускорение нарастает плавно, без рывка
+  var STEP = 1 / 240; // фиксированный шаг интегрирования
+  var K = 1 - Math.exp(-STEP / TAU);
+
+  var top = 0, len = 1, marks = [], lit = [];
+  var idx = -1, target = 0, tf = 0, y = 0, v = 0, acc = 0, last = 0, raf = 0;
+
+  function px(el, name) { return parseFloat(getComputedStyle(el).getPropertyValue(name)) || 0; }
+
+  // геометрия берётся из вёрстки: центры маркеров относительно .tl
+  function measure() {
+    top = px(tl, "--tl-top");
+    len = Math.max(1, tl.offsetHeight - top - px(tl, "--tl-bottom"));
+    marks = jobs.map(function (j) { return j.offsetTop + px(j, "--mk-top") + px(j, "--mk-size") / 2; });
+  }
+
+  // какая карточка «достигнута»: вниз — маркер выше 64% окна, вверх — ниже 72% (зазор убирает дребезг)
+  function pick() {
+    var vh = window.innerHeight, t = tl.getBoundingClientRect().top;
+    var down = vh * 0.64, up = vh * 0.72;
+    while (idx + 1 < marks.length && t + marks[idx + 1] < down) idx++;
+    while (idx >= 0 && t + marks[idx] > up) idx--;
+    target = idx < 0 ? top : marks[idx];
+  }
+
+  function render() {
+    ball.style.transform = "translate3d(0," + y.toFixed(2) + "px,0)";
+    fill.style.transform = "scaleY(" + Math.min(1, Math.max(0, (y - top) / len)).toFixed(4) + ")";
+    for (var i = 0; i < jobs.length; i++) {
+      // маркер загорается, когда шарик его достиг; гаснет только когда шарик покинул его вверх.
+      // Горящие маркеры выше цели не гаснут из-за перелёта шарика.
+      var on = (i <= idx && lit[i]) || y >= marks[i] - 2;
+      if (on !== lit[i]) { lit[i] = on; jobs[i].classList.toggle("is-on", on); }
+    }
+  }
+
+  function tick(now) {
+    raf = 0;
+    if (mq.matches) return;
+    acc += Math.min(0.05, (now - last) / 1000 || 0.016);
+    last = now;
+    while (acc >= STEP) {
+      tf += (target - tf) * K;
+      v += (OMEGA * OMEGA * (tf - y) - 2 * ZETA * OMEGA * v) * STEP;
+      y += v * STEP;
+      acc -= STEP;
+    }
+    render();
+    if (Math.abs(target - tf) < 0.05 && Math.abs(tf - y) < 0.05 && Math.abs(v) < 0.5) {
+      y = tf = target; v = 0; render(); return;   // покой: цикл останавливается
+    }
+    raf = requestAnimationFrame(tick);
+  }
+  function wake() { if (!raf && !mq.matches) { last = performance.now(); raf = requestAnimationFrame(tick); } }
+  function relayout() { measure(); pick(); wake(); }
+
+  measure(); pick(); y = tf = target; render();   // старт без «влёта»
+
+  window.addEventListener("scroll", function () { pick(); wake(); }, { passive: true });
+  window.addEventListener("resize", relayout);
+  if (window.ResizeObserver) {
+    var ro = new ResizeObserver(relayout);
+    ro.observe(tl); jobs.forEach(function (j) { ro.observe(j); });
+  }
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(relayout);
+  if (mq.addEventListener) mq.addEventListener("change", wake);
+})();
+</script>
+</body>
+</html>
